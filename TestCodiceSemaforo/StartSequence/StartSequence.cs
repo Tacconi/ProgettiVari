@@ -8,5 +8,9 @@ namespace StartSequence
 {
     public class StartSequence
     {
+        public StartSequence()
+        { }
+       public  StartSequence(int stepIntervall)
+        {}
     }
 }
