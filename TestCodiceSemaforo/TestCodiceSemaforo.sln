@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCodice", "TestCodice\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartSequence", "StartSequence\StartSequence.csproj", "{C0583E0F-ED6B-4E3F-851E-11B38A959573}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82CA3799-08C6-4D63-8911-D7DD683E094A}"
+	ProjectSection(SolutionItems) = preProject
+		SequenzaSemaforo.txt = SequenzaSemaforo.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
