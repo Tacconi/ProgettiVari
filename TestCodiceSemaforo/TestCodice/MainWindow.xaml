@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Height="24" Margin="63,133,0,0" VerticalAlignment="Top" Width="76"/>
+        <!--Semaforo Principale-->
+        <Ellipse x:Name="Rosso"  HorizontalAlignment="Left" Height="72" Margin="196,30,0,0" Stroke="Red" VerticalAlignment="Top" Width="76"/>
+        <Ellipse x:Name="Giallo" HorizontalAlignment="Left" Height="72" Margin="196,121,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="76"/>
+        <Ellipse x:Name="Verde"  HorizontalAlignment="Left" Height="72" Margin="196,198,0,0" Stroke="Green" VerticalAlignment="Top" Width="76"/>
+        <!--Semafori Secondi-->
+        <Ellipse x:Name="Giallo1"  HorizontalAlignment="Left" Height="35" Margin="296,30,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="35"/>
+        <Ellipse x:Name="Giallo2"  HorizontalAlignment="Left" Height="35" Margin="296,70,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="35"/>
+        <Ellipse x:Name="Giallo3"  HorizontalAlignment="Left" Height="35" Margin="296,110,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="35"/>
+        <Ellipse x:Name="Giallo4"  HorizontalAlignment="Left" Height="35" Margin="296,150,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="35"/>
+        <Ellipse x:Name="Giallo5"  HorizontalAlignment="Left" Height="35" Margin="296,190,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="35"/>
+
     </Grid>
 </Window>
