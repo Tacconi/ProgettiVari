@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Timers;
 
 namespace StartSequence
 {
@@ -16,7 +18,7 @@ namespace StartSequence
     public class StartSequence
     {
         public event EventHandler<SequenceChangeEventArgs> SequenceChange; //evento per cambio colore e suono
-
+        private int Intervall { get; set; }
         public StartSequence()
         {
 
@@ -24,11 +26,14 @@ namespace StartSequence
 
         public StartSequence(int stepIntervall)
         {
-
+            Intervall = stepIntervall;
         }
         public void Start()
         {
-            TimeSpan Change = new TimeSpan(0, 0, 5);
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 5);
+
+
             OnSequenceChange(LightColor.Red, SoundType.Change); // 5 secondi
             //subito dopo
             OnSequenceChange(LightColor.Yellow, SoundType.Change); //5secondi
