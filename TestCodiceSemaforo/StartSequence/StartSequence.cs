@@ -19,34 +19,68 @@ namespace StartSequence
     {
         public event EventHandler<SequenceChangeEventArgs> SequenceChange; //evento per cambio colore e suono
         private int Intervall { get; set; }
+        private Timer timer;
+
         public StartSequence()
         {
-
+            timer = new Timer();            
+            Intervall = 0;
         }
 
         public StartSequence(int stepIntervall)
         {
             Intervall = stepIntervall;
         }
+
         public void Start()
         {
-            Timer timer = new Timer();
-            TimeSpan Change = new TimeSpan(0, 0, 5);
-            timer.Interval = 5;
+            timer.Elapsed += Timer_Tick;
+            timer.Start();
+        }
 
+        private void Timer_Tick(object sender, ElapsedEventArgs e)
+        {
+            if (Intervall < 5)
+            {
+                OnSequenceChange(LightColor.Red, SoundType.Change); // 5 secondi
+            }
 
-            OnSequenceChange(LightColor.Red, SoundType.Change); // 5 secondi
-            //subito dopo
-            OnSequenceChange(LightColor.Yellow, SoundType.Change); //5secondi
-            // subito dopo 
-            OnSequenceChange(LightColor.Sec5, SoundType.Change); //1 secondo
-            OnSequenceChange(LightColor.Sec4, SoundType.Change); //1 secondo
-            OnSequenceChange(LightColor.Sec3, SoundType.Change); //1 secondo
-            OnSequenceChange(LightColor.Sec2, SoundType.Change); //1 secondo
-            OnSequenceChange(LightColor.Sec1, SoundType.Change); //1 secondo
-            //subito dopo 
-            OnSequenceChange(LightColor.Green, SoundType.Start); //fissa
+            if (Intervall < 10)
+            {
+                OnSequenceChange(LightColor.Yellow, SoundType.Change); //5secondi
+            }
 
+            if (Intervall < 11)
+            {
+                OnSequenceChange(LightColor.Sec5, SoundType.Change); //1 secondo
+            }
+
+            if (Intervall < 12)
+            {
+                OnSequenceChange(LightColor.Sec4, SoundType.Change); //1 secondo
+            }
+
+            if (Intervall < 13)
+            {
+                OnSequenceChange(LightColor.Sec3, SoundType.Change); //1 secondo
+            }
+
+            if (Intervall < 14)
+            {
+                OnSequenceChange(LightColor.Sec2, SoundType.Change); //1 secondo
+            }
+
+            if (Intervall < 15)
+            {
+                OnSequenceChange(LightColor.Sec1, SoundType.Change); //1 secondo
+            }
+
+            if (Intervall > 15)
+            {
+                OnSequenceChange(LightColor.Green, SoundType.Start); //fissa
+            }
+
+            Intervall++;
         }
 
         private void OnSequenceChange(LightColor light, SoundType sound)
@@ -57,10 +91,7 @@ namespace StartSequence
 
         public void Abort()
         {
-
+            timer.Stop();
         }
-
-
-
     }
 }

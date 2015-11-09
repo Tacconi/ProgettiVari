@@ -28,22 +28,15 @@ namespace TestCodice
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            StartSequence.StartSequence st = new StartSequence.StartSequence();
-            st.SequenceChange += St_SequenceChange;
+          
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //StartSequence.StartSequence st = new StartSequence.StartSequence();
-            //st.SequenceChange += St_SequenceChange;
-        }
 
+        }
         private void St_SequenceChange(object sender, SequenceChangeEventArgs e)
         {
-            if (e.Light == LightColor.Red)
-            {
-                Rosso.Fill = new SolidColorBrush(Colors.Red);
-            }
-       }
+            
+        }       
     }
 }
