@@ -30,8 +30,9 @@ namespace StartSequence
         }
         public void Start()
         {
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 5);
+            Timer timer = new Timer();
+            TimeSpan Change = new TimeSpan(0, 0, 5);
+            timer.Interval = 5;
 
 
             OnSequenceChange(LightColor.Red, SoundType.Change); // 5 secondi

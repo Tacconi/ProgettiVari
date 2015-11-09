@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestCodice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
-        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Height="24" Margin="63,133,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Height="24" Margin="63,133,0,0" VerticalAlignment="Top" Width="76" Click="btnStart_Click"/>
         <!--Semaforo Principale-->
         <Ellipse x:Name="Rosso"  HorizontalAlignment="Left" Height="72" Margin="196,30,0,0" Stroke="Red" VerticalAlignment="Top" Width="76"/>
         <Ellipse x:Name="Giallo" HorizontalAlignment="Left" Height="72" Margin="196,121,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="76"/>
